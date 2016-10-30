@@ -24,14 +24,11 @@ function draw() {
   var cs = color('rgba(179,226,205,100)');
   
 
-  var sec = TWO_PI * second() / 60;
-  var min = TWO_PI * minute() / 60;
-  //var hr =  TWO_PI *  12/ 12;
-  var hr = TWO_PI * ( hour() < 12 ? hour() : hour() + 12) / 12 ;
-  if(hr == 0 || hr == TWO_PI )
-  {
-  	hr = 0.0001;		//workaround for time bug
-  }
+  var sec = TWO_PI * second() / 60 + 0.0001;
+  var min = TWO_PI * minute() / 60 + 0.0001;
+  
+  var hr = TWO_PI * ( hour() < 12 ? hour() : hour() + 12) / 12 + 0.0001;
+
   drawArc( radius, cs, sec ,60);
   drawArc( radius- nStroke, cm, min ,60);
   drawArc( radius - 2*nStroke, ch , hr , 12 ); 
