@@ -1,3 +1,6 @@
+
+
+
 var centerX,centerY;
 var radius = 600;
 var eStroke = 80;
@@ -78,4 +81,8 @@ function mousePressed() {
 
 
 
+/*
+base example processing port from
+circle path clock by <a href="http://www.local-guru.net/guru">guru</a>
+*/
 
