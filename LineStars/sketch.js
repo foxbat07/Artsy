@@ -3,7 +3,6 @@ var theta=0;
 var length = 300;
 var r = 200;
 
-
 function setup() {
 
 	 c = createCanvas(windowWidth, windowHeight);
@@ -13,13 +12,15 @@ function setup() {
 	 smooth();
 
 
+
+
 }
 
 function draw() {
  
   theta=0;
   var dist = 20;
-  var outside = 1750;
+  var outside = 2000;
   var inside = 50;
 
   background(10);
@@ -41,7 +42,7 @@ function draw() {
 	  var x3 = r * cos(theta - (2*PI/3));
 	  var y3 = r * sin(theta - (2*PI/3));
 
-	  stroke(  128+ 128 * sin( r * millis()* 0.000001));
+	  stroke( 128 * cos( r * millis()* 0.000001));
 	  triangle( x1,y1,x2,y2,x3,y3 );  
   }
  
