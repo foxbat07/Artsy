@@ -8,7 +8,7 @@ function setup() {
 	 c = createCanvas(windowWidth, windowHeight);
 	 centerX = windowWidth/2;
 	 centerY = windowHeight/2;
-	 frameRate(30);
+	 frameRate(60);
 	 smooth();
 
 
@@ -21,6 +21,7 @@ function setup() {
 
 function draw() {
   
+  sp.fRate = frameRate();
   background(0);
   noFill();
   translate(centerX,centerY);
@@ -36,7 +37,7 @@ function draw() {
 
   	  theta+=PI/sp.thetaDiv;
 
-  	  //translate(r/100,r/100); 	  
+  	  //translate(r/100,0); 	  
 
   	  var x1 = r * cos(theta);
 	  var y1 = r * sin(theta);
@@ -62,12 +63,13 @@ var initGui = function() {
   var f2 = gui.addFolder('Simulation Parameters');
  
   f2.add(sp, 'r',100,500);
-  f2.add(sp, 'dist',1,30);
+  f2.add(sp, 'dist',1,60);
   f2.add(sp, 'flickr',0.1,2);
   f2.add(sp,'thetaDiv',10, 500);
   f2.add(sp,'whites',0, 255);
   f2.add(sp,'p1',0, 20);
   f2.add(sp,'p2',0, 1);
+  f2.add(sp,'fRate',0, 100).listen();
   
 }
 
@@ -79,6 +81,7 @@ var simulationParameters = function(){
   this.whites = 200;
   this.p1 = 0.5;
   this.p2 = 0.1;
+  this.fRate = frameRate();
 
 
   
