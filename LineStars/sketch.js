@@ -27,9 +27,9 @@ function draw() {
   translate(centerX,centerY);
   var theta = 0; 
   var dist = 20;
-  var outside = 2000;
+  var outside = 1500;
   var inside = 100;
-  theta+= sp.p1 * sin(TWO_PI * 0.01 * sp.p2 * frameCount);	 
+  //theta+= sp.p1 * sin(TWO_PI * 0.01 * sp.p2 * frameCount);	 
   
   
   for ( var r = inside ; r < outside ; r+=sp.dist)
@@ -46,14 +46,12 @@ function draw() {
 	  var x3 = r * cos(theta - (2*PI/3));
 	  var y3 = r * sin(theta - (2*PI/3));
 
-	  stroke( sp.whites * sin( r * millis()* 0.000001 * sp.flickr));//255-
+	  strokeColor = sp.whites * sin( r * millis()* 0.000001 * sp.flickr)
+	  stroke(strokeColor );
+	  //if ( strokeColor > 100)
 	  triangle( x1,y1,x2,y2,x3,y3 );  
   }
  
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
 }
 
 
