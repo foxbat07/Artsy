@@ -11,13 +11,14 @@ function setup() {
 function draw(){
   background(0);
 
+  
 
   var xLim = 4000;
   var yLim = 4000;
   var zLim = 4000;
 
   var space = 500;
-  camera(0,0,1000);
+ 
   //perspective(60, 60,100,1000);
 
   var dirY = (mouseY / height - 0.5) *3;
