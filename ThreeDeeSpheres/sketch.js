@@ -28,28 +28,28 @@ function draw(){
   pointLight(128,128,128, dirX, -dirY, 1.0);
   
   for(var i = 0 ; i <= zLim ; i+=space ){
- 	 for(var j = 0 ; j <= yLim ; j+=space ){
- 	 	for(var k = 0 ; k <= xLim ; k+=space ){
+   for(var j = 0 ; j <= yLim ; j+=space ){
+    for(var k = 0 ; k <= xLim ; k+=space ){
 
-		push();
-		//translate(100* noise(i),100* noise(j),100* noise(k));
-		//translate( 100 * sin(k* i * 0.00000001* frameCount) ,0, 1000* sin(0.01* frameCount) );	
-		translate( 100 * sin(k* i * 0.00000001* frameCount) ,0,0 );	
-		translate( 0 ,0, 1000* sin(0.01* frameCount) );	
-		
-		translate(i - zLim/2 ,j - yLim/2,k - xLim); 
-		//specularMaterial(0,128,228);
-		specularMaterial(20,128 + 128 * sin( k* 0.00001* frameCount)  ,200  );
-
-
-  		//box(50);
-  		sphere(30);
-  		pop();
+    push();
+    //translate(100* noise(i),100* noise(j),100* noise(k));
+    //translate( 100 * sin(k* i * 0.00000001* frameCount) ,0, 1000* sin(0.01* frameCount) );  
+    translate( 100 * sin(k* i * 0.00000001* frameCount) ,0,0 ); 
+    translate( 0 ,0, 1000* sin(0.01* frameCount) ); 
+    
+    translate(i - zLim/2 ,j - yLim/2,k - xLim); 
+    //specularMaterial(0,128,228);
+    specularMaterial(20,128 + 128 * sin( k* 0.00001* frameCount)  ,200  );
 
 
+      //box(50);
+      sphere(30);
+      pop();
 
- 	 }
-  	}
-  }	
+
+
+   }
+    }
+  } 
  
 }// end of draw
