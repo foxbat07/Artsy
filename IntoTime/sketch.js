@@ -67,7 +67,7 @@ function draw() {
 var initGui = function() {
   var f2 = gui.addFolder('Simulation Parameters');
 
-  var obj = { add:function(){ console.log("save image");  save(c, 'myGraphics.jpg');    }};
+  var saveFrame = { add:function(){ console.log("save image");  save(c, 'myGraphics.jpg');    }};
 
  
   f2.add(sp, 'r',-500,500);
@@ -78,7 +78,7 @@ var initGui = function() {
   f2.add(sp,'p1',0, 20);
   f2.add(sp,'p2',0, 1);
   f2.add(sp,'fRate',0, 100).listen();
-  f2.add(obj,'add');
+  f2.add(saveFrame,'add');
 
 
   
