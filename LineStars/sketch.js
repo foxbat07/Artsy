@@ -1,5 +1,3 @@
-
-
 var gui;
 
 function setup() {
@@ -12,7 +10,7 @@ function setup() {
 	 smooth();
 
 
-     sp = new simulationParameters();
+   sp = new simulationParameters();
 	 gui = new dat.GUI();
 	 initGui();
 
@@ -81,7 +79,5 @@ var simulationParameters = function(){
   this.p2 = 0.1;
   this.fRate = frameRate();
 
-
-  
 }
 
